@@ -1,0 +1,93 @@
+<!doctype html>
+<html ng-app="keuanganApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/mdDataTable/dist/md-data-table-style.css">
+    <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div ng-controller="MainCtrl" layout="column" style="height:100%;" ng-cloak layout-fill>
+      <md-content flex layout="column">
+        <md-toolbar md-scroll-shrink ng-if="true">
+          <div class="md-toolbar-tools">
+            <md-button aria-label="toggle" class="md-icon-button" ng-click="toggleLeft()">
+              <i class="fa fa-bars"></i>
+            </md-button>
+            <h3>Dasboard Admin</h3>
+            <span flex></span>
+            <md-button aria-label="options" class="md-icon-button">
+              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <div layout="row" flex style="height:100%;">
+          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
+            <md-toolbar class="md-theme-indigo">
+              <h1 class="md-toolbar-tools">Menu</h1>
+            </md-toolbar>
+            <md-content>
+              <!-- <md-subheader class="md-no-sticky">Data</md-subheader>
+              <hr /> -->
+              <md-list-item href="/#/">
+                <p>Home</p>
+                <md-icon class="fa fa-home"></md-icon>
+              </md-list-item>
+              <hr />
+              <md-list-item href="" ng-click="showDialogPosting($event)">
+                <p>Tambah Data</p>
+                <md-icon class="fa fa-plus"></md-icon>
+              </md-list-item>
+              <hr />
+              <md-list-item href="/#/data" ng-click="showAdvanced($event)">
+                <p>Tampilkan Data</p>
+                <md-icon class="fa fa-list-alt"></md-icon>
+              </md-list-item>
+              <hr />
+              <md-list-item href="/#/calculator" ng-click="showAdvanced($event)">
+                <p>Kalkulator</p>
+                <md-icon class="fa fa-calculator"></md-icon>
+              </md-list-item>
+              <hr />
+            </md-content>
+          </md-sidenav>
+          <md-content flex ng-view class="animation"></md-content>
+        </div>
+      </md-content>
+    </div>
+  </div>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-material-icons/angular-material-icons.js" charset="utf-8"></script>
+  <script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
+  <script src="scripts/highcharts.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/test.js"></script>
+  <!-- <script src="scripts/directives/innerwidth.js"></script> -->
+  <script src="scripts/controllers/data.js"></script>
+  <script src="scripts/controllers/calculator.js"></script>
+  <script src="scripts/services/auth.js"></script>
+  <script src="scripts/services/toast.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
